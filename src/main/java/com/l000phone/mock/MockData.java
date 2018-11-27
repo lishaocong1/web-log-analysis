@@ -122,6 +122,7 @@ public class MockData {
                 DataTypes.createStructField("extend_info", DataTypes.StringType, true)));
 
         Dataset<Row> dataset = sqlContext.createDataFrame(rowsRDD, schema);
+        //若是数据事先储存在hdfs上,那么这时应该创建的是一张hive表
         dataset.createOrReplaceTempView("product_info");
     }
 

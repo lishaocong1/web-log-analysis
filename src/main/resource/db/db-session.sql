@@ -1,6 +1,6 @@
-CREATE DATABASE IF NOT EXISTS log_statics;
+CREATE DATABASE IF NOT EXISTS log_analysis;
 
-USE log_statics;
+USE log_analysis;
 -- session_aggr_stat表，存储第一个功能，session聚合统计的结果
 CREATE TABLE IF NOT EXISTS  `session_aggr_stat` (
   `task_id` int(11) NOT NULL,

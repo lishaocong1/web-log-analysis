@@ -52,7 +52,12 @@
       <version>4.12</version>
       <scope>test</scope>
     </dependency>
-
+    <!---会使用注释的形式自动生成实体类的getter,setter访问器,以及tostring方法,或者是构造方法 -->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.16.20</version>
+    </dependency>
     <dependency>
       <groupId>org.specs</groupId>
       <artifactId>specs</artifactId>
