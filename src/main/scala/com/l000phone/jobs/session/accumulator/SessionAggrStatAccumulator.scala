@@ -1,4 +1,4 @@
-package com.l000phone.jobs.session
+package com.l000phone.jobs.session.accumulator
 
 import com.l000phone.constant.Constants
 import com.l000phone.util.StringUtils
@@ -20,7 +20,7 @@ import org.apache.spark.util.AccumulatorV2
 class SessionAggrStatAccumulator extends AccumulatorV2[String,String]{
   //result:记录的是当前累加器的最终结果
   //session_count=0|1s_3s=0|4s_6s...|60=0
-  var result=Constants.AGGR_RESULT.toString // 初始值
+  var result=Constants.AGGR_RESULT.toString//初始值
   /**
     * 当AccumulatorV2中存在类似数据不存在这种问题时,是否结束程序
     * @return
