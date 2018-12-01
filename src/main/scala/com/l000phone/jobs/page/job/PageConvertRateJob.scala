@@ -10,7 +10,7 @@ import com.l000phone.dao.common.impl.TaskDaoImpl
 import com.l000phone.dao.page.IPageSplitConvertRateDao
 import com.l000phone.dao.page.impl.PageSplitConvertRateDaoImpl
 import com.l000phone.mock.MockData
-import com.l000phone.util.{ResourcesUtils, StringUtils}
+import com.l000phone.util.{NumberUtils, ResourcesUtils, StringUtils}
 import org.apache.spark.rdd.RDD
 import org.apache.spark.sql.{Row, SparkSession}
 import org.apache.spark.sql.SparkSession.Builder
@@ -80,7 +80,7 @@ object PageConvertRateJob {
       if (now_page_id_cnt == 0 || next_page_id_cnt == 0) {
         rate = 0
       } else {
-        rate =   next_page_id_cnt.toDouble / now_page_id_cnt
+        rate =NumberUtils.formatDouble(next_page_id_cnt.toDouble / now_page_id_cnt,4)
       }
       page_flow_temp = StringUtils.setFieldInConcatString(page_flow_temp, "\\|", field, rate + "")
     }
