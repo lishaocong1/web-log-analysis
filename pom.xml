@@ -49,7 +49,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.12</version>
+      <version>4.13.1</version>
       <scope>test</scope>
     </dependency>
     <!---会使用注释的形式自动生成实体类的getter,setter访问器,以及tostring方法,或者是构造方法 -->
