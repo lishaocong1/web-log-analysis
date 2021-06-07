@@ -26,7 +26,7 @@ object AdFlowRealTimeCalJob {
     val returnResult: (StreamingContext, DStream[(String, String)]) = operatePrepare(args)
     val ssc = returnResult._1
     val dsFromKafka = returnResult._2
-    //新增
+    //新增的
 
     //步骤：
     //1、实时计算各batch中的每天各用户对各广告的点击次数
