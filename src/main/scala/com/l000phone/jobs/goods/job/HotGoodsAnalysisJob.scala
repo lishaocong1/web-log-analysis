@@ -19,8 +19,9 @@ import org.apache.spark.sql.{Row, SparkSession}
 object HotGoodsAnalysisJob {
   def main(args: Array[String]): Unit = {
     //前提：
+    //哈哈哈
     val spark: SparkSession = prepareOperate(args)
-
+    
 
     //步骤：
     //①Spark作业接收taskid，查询对应的MySQL中的task，获取用户指定的筛选参数；
